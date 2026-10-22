@@ -1,0 +1,52 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  
+
+        <!-- =========================
+         DARK THEME COLORS
+         ========================= -->
+
+        <SolidColorBrush x:Key="WindowBackground"
+                     Color="#181A1B"/>
+
+        <SolidColorBrush x:Key="CardBackground"
+                     Color="#242728"/>
+
+        <SolidColorBrush x:Key="PrimaryTeal"
+                     Color="#20B5A7"/>
+
+        <SolidColorBrush x:Key="PrimaryTealDark"
+                     Color="#159B8F"/>
+
+        <SolidColorBrush x:Key="TextPrimary"
+                     Color="#FFFFFF"/>
+
+        <SolidColorBrush x:Key="TextSecondary"
+                     Color="#B8BDBE"/>
+
+        <SolidColorBrush x:Key="BorderColor"
+                     Color="#3A3E3F"/>
+
+        <SolidColorBrush x:Key="InputBackground"
+                     Color="#2C3031"/>
+
+        <SolidColorBrush x:Key="InputForeground"
+                     Color="#FFFFFF"/>
+
+        <SolidColorBrush x:Key="ToggleOff"
+                     Color="#2C3031"/>
+
+        <SolidColorBrush x:Key="ToggleBorder"
+                     Color="#777D7E"/>
+
+        <SolidColorBrush x:Key="SidebarBackground"
+                 Color="#202223"/>
+
+        <SolidColorBrush x:Key="SidebarbtnBackground">#202223</SolidColorBrush>
+
+        <SolidColorBrush x:Key="ToggleThumbDisabledBrush"
+                 Color="White"/>
+
+
+</ResourceDictionary>
