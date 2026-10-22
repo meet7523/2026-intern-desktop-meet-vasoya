@@ -1,0 +1,149 @@
+﻿<Window x:Class="POC12_LoginApplicationWith_MVVM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POC12_LoginApplicationWith_MVVM"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Login" Height="600" Width="750" MinWidth="400">
+
+
+
+    <Grid x:Name="firstGrid" Margin="20">
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Row="0"
+                Orientation="Vertical" 
+                HorizontalAlignment="Stretch"
+                MaxWidth="500" 
+                Margin="0,0,0,44">
+
+            <TextBlock 
+               Text="Login"
+               FontSize="24"
+               HorizontalAlignment="Center"
+               FontWeight="Bold"
+               Margin="50"/>
+
+
+            <TextBlock 
+                    x:Name="UsernameTextBlock"
+                    Text="Username:"
+                    Margin="10"
+                    FontSize="20"
+                    FontWeight="Medium"/>
+
+            <TextBox 
+                     x:Name="UsernameTextBox"
+                     Margin="10"
+                     Padding="10 5 0 0"
+                     FontSize="16"
+                     Height="35"
+                     HorizontalAlignment="Stretch"
+                     Text="{Binding Username,UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock x:Name="unamevalidate"
+                        Foreground="Red"
+                        Margin="10 0 0 0"
+                        FontWeight="Bold"
+                        Text="{Binding UsernameError}" />
+
+            <TextBlock Grid.Row="2"
+                       x:Name="PasswordTextBlock"
+                       Text="Password:"
+                       Margin="10 0 0 10"
+                       FontSize="20"
+                       FontWeight="Medium"/>
+
+
+            <Grid Grid.Row="3">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <PasswordBox 
+                         Grid.ColumnSpan="2"
+                         x:Name="PasswordBox"
+                         Padding="10 5 0 0"
+                         Margin="10"
+                         FontSize="16"
+                         Height="35"
+                         PasswordChanged="PasswordBox_PasswordChanged" Visibility="Visible"/>
+
+                <TextBox 
+                         x:Name="txtPassword"
+                         Margin="10"
+                         Padding="10 5 0 0"
+                         Height="35"
+                         FontSize="16"
+                         Visibility="Collapsed"
+                         HorizontalAlignment="Stretch"
+                         TextChanged="txtPassword_TextChanged"/>
+
+            </Grid>
+
+            <CheckBox 
+                x:Name="chkShowPassword"
+                Content="Show Password"
+                Margin="10 10 0 0"
+                Height="30"
+                FontSize="14"
+                HorizontalAlignment="Stretch"
+                Checked="chkShowPassword_Checked"
+                Unchecked="chkShowPassword_Unchecked"/>
+
+            <TextBlock x:Name="passvalidate"
+                        Foreground="Red"
+                        Margin="10 0 0 0"
+                        FontWeight="Bold"
+                        Text="{Binding PasswordError}"/>
+
+            <TextBlock x:Name="loginmsg"
+                        Foreground="Red"
+                        FontWeight="Bold"
+                        Margin="10 0 0 0"
+                        Text="{Binding Message}"/>
+
+
+            <Grid Grid.Row="4" Margin="10,20,10,0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0"
+                    x:Name="LoginButton"
+                    Content="Login"
+                    Height="40"
+                    Margin="0"
+                    HorizontalAlignment="Stretch"
+                    FontSize="18"
+                    Command="{Binding LoginCommand}"/>
+
+                <Button Grid.Column="2"
+                    x:Name="CancelButton"
+                    Content="Cancel"
+                    HorizontalAlignment="Stretch"
+                    Height="40"
+                    Margin="0"
+                    FontSize="18"
+                    Click="CancelButton_Click"
+                    Command="{Binding CancelCommand}"/>
+
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</Window>
