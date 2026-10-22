@@ -1,0 +1,134 @@
+﻿<Window x:Class="POC15__TaskManagementApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:POC15__TaskManagementApp.ViewModels"
+        xmlns:view="clr-namespace:POC15__TaskManagementApp.Views"
+        mc:Ignorable="d"
+        Title="Task Management System"
+        Height="600"
+        Width="1000"
+        WindowStartupLocation="CenterScreen">
+
+
+    <Window.Resources>
+
+        <DataTemplate DataType="{x:Type vm:DashboardViewModel}">
+            <view:DashboardView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:EditTaskViewModel}">
+            <view:EditTask/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:AddTaskViewModel}">
+            <view:AddNewTask/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
+            <view:SettingsView/>
+        </DataTemplate>
+		
+
+        <DataTemplate DataType="{x:Type vm:TaskDetailViewModel}">
+            <view:TaskDetailView/>
+        </DataTemplate>
+
+    </Window.Resources>
+
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0"
+                Background="{DynamicResource AppBackground}"
+                BorderBrush="{DynamicResource BorderBrushColor}"
+                BorderThickness=".75">
+
+            <TextBlock Text="Task Management System"
+                       Foreground="{DynamicResource AppForeground}"
+                       FontSize="20"
+                       FontWeight="Medium"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"/>
+
+        </Border>
+
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Border Grid.Column="0"
+                    Background="{DynamicResource AppBackground}"
+                    BorderBrush="{DynamicResource BorderBrushColor}"
+                    BorderThickness=".75">
+
+            <StackPanel Margin="10">
+
+                <Button Content="Dashboard"
+                            Height="40"
+                            Margin="0,10"
+                            FontSize="15"
+                            FontWeight="Normal"
+                            Background="#007ACC"
+                            Foreground="White"
+                            Command="{Binding DashboardCommand}"/>
+
+                <Button Content=" Add New Tasks"
+                            Height="40"
+                            Margin="0,10"
+                            FontSize="15"
+                            FontWeight="Normal"
+                            Background="#007ACC"
+                            Foreground="White"
+                            Command="{Binding AddTaskCommand}"/>
+
+
+                    <Button Content="Settings"
+                            Height="40"
+                            Margin="0,10"
+                            FontSize="15"
+                            FontWeight="Normal"
+                            Background="#007ACC"
+                            Foreground="White"
+                            Command="{Binding SettingsCommand}"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <Border Grid.Column="1"
+                    Background="{DynamicResource AppBackground}"
+                    BorderBrush="{DynamicResource BorderBrushColor}"
+                    BorderThickness=".75">
+
+                <ContentControl x:Name="taskcontent"
+                                Content="{Binding CurrentView}"/>
+
+            </Border>
+
+    </Grid>
+
+    <StatusBar Grid.Row="2">
+
+        <StatusBarItem>
+            <TextBlock Text="Ready"/>
+        </StatusBarItem>
+
+    </StatusBar>
+
+    </Grid>
+
+</Window>

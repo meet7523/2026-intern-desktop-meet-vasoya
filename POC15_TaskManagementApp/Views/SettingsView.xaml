@@ -1,0 +1,193 @@
+﻿<UserControl x:Class="POC15__TaskManagementApp.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:POC15__TaskManagementApp.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="800" Background="{DynamicResource AppBackground}">
+
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15"/>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15"/>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15"/>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15"/>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15"/>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+
+
+            <TextBlock Text="Application Settings"
+                       FontSize="18"
+                       FontWeight="Medium"
+                       Foreground="{DynamicResource AppForeground}"
+                       HorizontalAlignment="Center"/>
+
+
+        <GroupBox Grid.Row="2"
+                  Header="Theme"
+                  Foreground="{DynamicResource AppForeground}"
+                  FontSize="15"
+				  FontWeight="Normal"
+                  BorderThickness="1">
+
+            <StackPanel Margin="10">
+
+                <RadioButton Content="Light"
+                             GroupName="Theme"
+                             Margin="0 5"
+                             FontSize="14"
+                             IsChecked="{Binding IsLightTheme}"
+                             Foreground="{DynamicResource AppForeground}"
+                             FontWeight="Normal">
+
+                    <RadioButton.RenderTransform>
+                        <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                    </RadioButton.RenderTransform>
+                </RadioButton>
+
+                <RadioButton Content="Dark"
+                             GroupName="Theme"
+                             Margin="0 5"
+                             FontSize="14"
+                             IsChecked="{Binding IsDarkTheme}"
+                             Foreground="{DynamicResource AppForeground}"
+                             FontWeight="Normal">
+
+                    <RadioButton.RenderTransform>
+                        <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                    </RadioButton.RenderTransform>
+                </RadioButton>
+
+            </StackPanel>
+
+        </GroupBox>
+
+
+        <GroupBox Grid.Row="4"
+          Header="Font Size"
+          Foreground="{DynamicResource AppForeground}"
+          FontSize="15"
+          FontWeight="Normal">
+
+            <StackPanel Margin="10">
+
+                <TextBlock Text="Select Application Font Size"
+                   Margin="0,0,0,8"
+                   FontSize="13"
+                   Foreground="{DynamicResource AppForeground}"/>
+
+                <ComboBox Width="180"
+                  Height="32"
+                  Text="Font Size"
+                  FontSize="15"
+                  HorizontalAlignment="Left"
+                  ItemsSource="{Binding FontSizes}"
+                 SelectedItem="{Binding SelectedFontSize, Mode=TwoWay}"/>
+
+
+
+            </StackPanel>
+
+        </GroupBox>
+
+
+        <GroupBox Grid.Row="6"
+                  Header="Notification"
+                  FontSize="15"
+                  FontWeight="Normal"
+                  Foreground="{DynamicResource AppForeground}">
+
+            <StackPanel Margin="10">
+
+                <CheckBox Content="Due Date Notifications"
+                          FontSize="13"
+                          FontWeight="Normal"
+                          IsChecked="{Binding EnableNotifications}"
+                          Foreground="{DynamicResource AppForeground}">
+
+                    <CheckBox.LayoutTransform >
+                        <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+
+            </StackPanel>
+
+        </GroupBox>
+
+       
+
+
+        <GroupBox Grid.Row="10"
+                  Header="Logging"
+                  Foreground="{DynamicResource AppForeground}"
+                  FontSize="13"
+                  FontWeight="Normal">
+
+            <StackPanel Margin="10">
+
+                <CheckBox Content="Enable Logging"
+                          IsChecked="{Binding EnableLogging}"
+                          Foreground="{DynamicResource AppForeground}"
+                          FontSize="13"
+                          FontWeight="Normal">
+
+                    <CheckBox.LayoutTransform >
+                        <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+
+            </StackPanel>
+
+        </GroupBox>
+
+
+
+        <StackPanel Grid.Row="12"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="0 10 0 0">
+
+            <Button Content="Save"
+                    x:Name="btnSave"
+                    Width="90"
+                    Height="35"
+                    Margin="5"
+                    FontSize="15"
+                    FontWeight="Medium"
+                    Background="#007ACC"
+                    Foreground="White"
+                    Command="{Binding SaveCommand}"/>
+
+            <Button Content="Cancel"
+                    x:Name="btnCancel"
+                    Width="90"
+                    Height="35"
+                    Margin="5"
+                    FontSize="15"
+                    Background="#007ACC"
+                    Foreground="White"
+                    FontWeight="Medium"/>
+
+        </StackPanel>
+
+    </Grid>
+    
+
+</UserControl>

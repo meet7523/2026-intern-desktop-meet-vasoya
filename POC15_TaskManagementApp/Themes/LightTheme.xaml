@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+    <SolidColorBrush x:Key="AppBackground" Color="White"/>
+    <SolidColorBrush x:Key="AppForeground" Color="Black"/>
+
+
+    <SolidColorBrush x:Key="CardBackground" Color="#F5F5F5"/>
+    <SolidColorBrush x:Key="BorderBrushColor" Color="#D0D0D0"/>
+
+
+    <SolidColorBrush x:Key="ButtonBackground" Color="#2196F3"/>
+    <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
+
+
+    <SolidColorBrush x:Key="GridBackground" Color="White"/>
+    <SolidColorBrush x:Key="GridHeaderBackground" Color="#EAEAEA"/>
+    <SolidColorBrush x:Key="GridHeaderForeground" Color="Black"/>
+    <SolidColorBrush x:Key="GridRowBackground" Color="White"/>
+    <SolidColorBrush x:Key="GridRowForeground" Color="Black"/>
+
+    <System:Double x:Key="AppFontSize">14</System:Double>
+
+
+
+</ResourceDictionary>

@@ -1,0 +1,12 @@
+<Solution>
+  <Project Path="D:/2026-intern-desktop-meet-vasoya/POC08_WPF BASIC FORM/POC08_WPF BASIC FORM/POC08_WPF BASIC FORM.csproj">
+    <BuildDependency Project="D:/2026-intern-desktop-meet-vasoya/POC08_WPF BASIC FORM/POC_09 SYSTEM TRAY APPLICATION – QUICK NOTES/POC_09 SYSTEM TRAY APPLICATION – QUICK NOTES.csproj" />
+  </Project>
+  <Project Path="D:/2026-intern-desktop-meet-vasoya/POC08_WPF BASIC FORM/POC_09 SYSTEM TRAY APPLICATION – QUICK NOTES/POC_09 SYSTEM TRAY APPLICATION – QUICK NOTES.csproj" Id="961745c3-8a4e-44ba-9061-388a2a47a0a7" />
+  <Project Path="POC10_ProductInventoryManagement/POC10_ProductInventoryManagement.csproj" Id="4ab5d19e-1c46-49fe-bd34-5237fe5aa814" />
+  <Project Path="POC12_LoginApplicationWith_MVVM/POC12_LoginApplicationWith_MVVM.csproj" Id="a1a3ea15-d4f0-42d0-a9ec-1aed46f9188f" />
+  <Project Path="POC12__TaskManagementApp/POC15__TaskManagementApp.csproj" Id="bcb01c8d-7450-4f77-b643-53614393ea41" />
+  <Project Path="POC13_NavigationApplication_MVVM/POC13_NavigationApplication_MVVM.csproj" Id="3c931bc9-e97b-4d37-89e6-ccc93422ad83" />
+  <Project Path="POC14_Background-Task-Application/POC14_Background-Task-Application.csproj" Id="ff702c2f-8667-482d-b2bc-24097ac368d1" />
+  <Project Path="POC_11 MVVM_ConuterApplication/POC_11 MVVM_ConuterApplication.csproj" Id="25c00c52-83bf-4776-b082-246e914d5ad5" />
+</Solution>
