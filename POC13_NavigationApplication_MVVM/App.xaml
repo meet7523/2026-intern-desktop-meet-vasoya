@@ -1,0 +1,17 @@
+﻿<Application x:Class="POC13_NavigationApplication_MVVM.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:POC13_NavigationApplication_MVVM"
+             xmlns:view="clr-namespace:POC13_NavigationApplication_MVVM.Views"
+             xmlns:vm="clr-namespace:POC13_NavigationApplication_MVVM.ViewModels"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/LightTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

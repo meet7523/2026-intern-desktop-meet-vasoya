@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="AppBackgroundBrush" Color="White"/>
+    <SolidColorBrush x:Key="AppForegroundBrush" Color="Black"/>
+
+    <SolidColorBrush x:Key="WindowBackground" Color="White"/>
+    <SolidColorBrush x:Key="ForegroundBrush" Color="Black"/>
+    <SolidColorBrush x:Key="ButtonBackground" Color="#EAEAEA"/>
+
+    <SolidColorBrush x:Key="BorderBrush" Color="#C8C8C8"/>
+
+    <SolidColorBrush x:Key="GridBackground" Color="White"/>
+    <SolidColorBrush x:Key="GridForeground" Color="Black"/>
+    <SolidColorBrush x:Key="GridHeaderBackground" Color="#EAEAEA"/>
+    <SolidColorBrush x:Key="GridHeaderForeground" Color="Black"/>
+
+
+</ResourceDictionary>

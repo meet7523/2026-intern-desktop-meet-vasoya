@@ -1,0 +1,145 @@
+﻿<UserControl x:Class="POC13_NavigationApplication_MVVM.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:POC13_NavigationApplication_MVVM.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+
+    <Grid Background= "{DynamicResource WindowBackground}">
+
+        <Border Width="450"
+                Padding="25"
+                BorderThickness="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0"
+                           Grid.ColumnSpan="2"
+                           Text="Application Settings"
+                           FontSize="16"
+                           FontWeight="SemiBold"
+                           HorizontalAlignment="Center"
+                           Foreground="{DynamicResource AppForegroundBrush}"/>
+
+                <CheckBox Grid.Row="2"
+                          Grid.ColumnSpan="2"
+                          Content="Start With Windows"
+                          VerticalAlignment="Center"
+                          IsChecked="{Binding StartWithWindows}"
+                          Foreground="{DynamicResource AppForegroundBrush}">
+
+                    <CheckBox.LayoutTransform >
+                        <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                    </CheckBox.LayoutTransform>
+
+                </CheckBox>
+
+
+                <TextBlock Grid.Row="3"
+                           Grid.Column="0"
+                           Text="Font Size"
+                           FontSize="16"
+                           VerticalAlignment="Center"
+                           Margin="0,10"
+                           Foreground="{DynamicResource AppForegroundBrush}"/>
+
+                <ComboBox Grid.Row="3"
+                          Grid.Column="1"
+                          Width="180"
+                          Height="30"
+                          Margin="0,10"
+                          ItemsSource="{Binding FontSizes}"
+                          SelectedItem="{Binding SelectedFontSize}">
+
+
+
+                </ComboBox>
+
+
+                <TextBlock Grid.Row="4"
+                           Grid.Column="0"
+                           Text="Theme"
+                           FontSize="16"
+                           VerticalAlignment="Center"
+                           Margin="0,10"
+                           Foreground="{DynamicResource AppForegroundBrush}"/>
+
+                <ComboBox Grid.Row="4"
+                          Grid.Column="1"
+                          Width="180"
+                          Height="30"
+                          Margin="0,10"
+                          ItemsSource="{Binding Themes}"
+                          SelectedItem="{Binding SelectedTheme}"/>
+
+
+
+
+                <TextBlock Grid.Row="5"
+                           Grid.Column="0"
+                           Text="Start Page"
+                           FontSize="16"
+                           VerticalAlignment="Center"
+                           Margin="0,10"
+                           Foreground="{DynamicResource AppForegroundBrush}"/>
+
+                <ComboBox Grid.Row="5"
+                          Grid.Column="1"
+                          Width="180"
+                          Height="30"
+                          Margin="0,10"
+                          ItemsSource="{Binding StartPages}"
+                          SelectedItem="{Binding SelectedStartPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+
+
+
+
+                <StackPanel Grid.Row="7"
+                            Grid.ColumnSpan="2"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Right">
+
+                    <Button Content="Save"
+                            Width="100"
+                            Height="35"
+                            Margin="0,0,10,0"
+                            Command="{Binding SaveCommand}"/>
+
+                    <Button Content="Cancel"
+                            Width="100"
+                            Height="35"
+                            Command="{Binding CancelCommand}"/>
+
+                </StackPanel>
+
+            </Grid>
+        </Border>
+    </Grid>
+
+
+
+
+
+</UserControl>
