@@ -1,0 +1,25 @@
+## Visual Studio cache & temporary files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Build results & binaries
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## NuGet packages
+*.nupkg
+packages/
+
+## WPF and XAML designer temporary files
+*.g.cs
+*.g.i.cs
+*.baml
+
+## Test Results & Profiler
+TestResults/
+*.coverage
